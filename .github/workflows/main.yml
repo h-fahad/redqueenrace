@@ -30,10 +30,13 @@ jobs:
         uses: actions/setup-node@v2-beta
         with: 
          node-version: 12
-      
+         
+    
       - uses: borales/actions-yarn@v2.0.0      
         with:
           cmd: install # will run `yarn install` comman 
+      - name: Install animations
+        run: yarn add @wellyshen/use-web-animations
           
       - uses: borales/actions-yarn@v2.0.0
         with:
